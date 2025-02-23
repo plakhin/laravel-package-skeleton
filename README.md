@@ -1,7 +1,8 @@
 [![Tests Status](https://github.com/plakhin/php-package-skeleton/actions/workflows/main.yml/badge.svg)](https://github.com/plakhin/php-package-skeleton/actions)
 
-# PHP Package Skeleton
-This repository provides a minimal PHP package skeleton with some batteries included.
+# Laravel Package Skeleton
+This repository provides a minimal Laravel package skeleton with some batteries included.  
+Based on [php-package-skeleton](https://github.com/plakhin/php-package-skeleton/) template.
 
 #
 
@@ -10,8 +11,25 @@ This repository provides a minimal PHP package skeleton with some batteries incl
 You can install the package via composer:
 
 ```bash
-composer require plakhin/php-package-skeleton
+composer require plakhin/laravel-package-skeleton
 ```
+
+Then you need to publish and run package migrations:
+
+```bash
+php artisan vendor:publish --tag="skeleton-migrations"
+php artisan migrate
+```
+
+Then you may optionally publish the config file, translations, views and assets with:
+
+```bash
+php artisan vendor:publish --tag="skeleton-config"
+php artisan vendor:publish --tag="skeleton-translations"
+php artisan vendor:publish --tag="skeleton-views"
+php artisan vendor:publish --tag="skeleton-assets"
+```
+
 
 ## Usage
 

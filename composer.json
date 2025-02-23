@@ -1,8 +1,8 @@
 {
-    "name": "plakhin/php-package-skeleton",
+    "name": "plakhin/laravel-package-skeleton",
     "version": "1.0.0",
     "description": "A skeleton repository for my packages",
-    "keywords": ["php", "package", "skeleton"],
+    "keywords": ["laravel", "php", "package", "skeleton"],
     "license": "MIT",
     "authors": [
         {
@@ -11,11 +11,14 @@
         }
     ],
     "require": {
-        "php": "^8.3.0"
+        "php": "^8.3",
+        "illuminate/contracts": "^11.0"
     },
     "require-dev": {
         "laravel/pint": "^1.18.1",
+        "orchestra/testbench": "^9.11",
         "pestphp/pest": "^3.5.1",
+        "pestphp/pest-plugin-laravel": "^3.1",
         "pestphp/pest-plugin-type-coverage": "^3.1",
         "phpstan/phpstan": "^1.12.7",
         "rector/rector": "^1.2.8",
@@ -23,12 +26,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Plakhin\\PPSkeleton\\": "src/"
+            "Plakhin\\LPSkeleton\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Plakhin\\PPSkeleton\\Tests\\": "tests/"
+            "Plakhin\\LPSkeleton\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plakhin\\LPSkeleton\\LPSkeletonServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable",
