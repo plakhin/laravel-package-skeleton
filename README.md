@@ -34,9 +34,9 @@ php artisan vendor:publish --tag="skeleton-assets"
 ## Usage
 
 ```php
-use Plakhin\PPSkeleton\Skeleton;
+use Plakhin\LPSkeleton\Facades\Skeleton;
 
-(new Skeleton)->foo(); // string(3) "bar"
+Skeleton::foo(); // string(3) "bar"
 ```
 
 ## Contributing
