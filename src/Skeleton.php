@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Plakhin\PPSkeleton;
+namespace Plakhin\LPSkeleton;
 
 final class Skeleton
 {
     public function foo(): string
     {
-        return 'bar';
+        return config()->string('skeleton.foo');
     }
 }
