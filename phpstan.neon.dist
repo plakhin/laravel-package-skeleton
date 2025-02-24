@@ -2,5 +2,9 @@ parameters:
     level: max
     paths:
         - src
-
+        - src
+        - config
+        - database
     reportUnmatchedIgnoredErrors: true
+    checkOctaneCompatibility: true
+    checkModelProperties: true
