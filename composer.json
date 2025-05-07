@@ -1,6 +1,5 @@
 {
     "name": "plakhin/laravel-package-skeleton",
-    "version": "1.0.0",
     "description": "A skeleton repository for my packages",
     "keywords": ["laravel", "php", "package", "skeleton"],
     "license": "MIT",
