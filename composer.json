@@ -57,7 +57,10 @@
         "refactor": "rector",
         "test:lint": "pint --test --parallel",
         "test:refactor": "rector --dry-run",
-        "test:types": "phpstan analyse --ansi",
+        "test:types": [
+            "phpstan analyse --ansi",
+            "pest --colors=always --type-coverage --min=100"
+        ],
         "test:unit": "pest --colors=always --coverage --parallel --min=100",
         "test": [
             "@test:lint",
